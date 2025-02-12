@@ -20,37 +20,38 @@ class TextMenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: press,
-      child: Card(
-        margin: EdgeInsets.zero,
-        color: Colors.white,
-        elevation: 0,
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal:16),
-          child: Row(
+        onTap: press,
+        child: Card(
+          margin: EdgeInsets.zero,
+          color: Colors.white,
+          elevation: 0,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-                        Text(
-              title ?? "",
-              style: TextStyle(
-                fontSize: 16,
-                color: textColor,
-              ),
-            ),
-            Spacer(),
-            SizedBox(
-              width:26,
-              child:IconButton(
-                onPressed: (){},
-                icon: SvgPicture.asset(
-                  icon ?? "assets/icons/right_arrow.svg",
-                  colorFilter: ColorFilter.mode(iconColor ?? Colors.black, BlendMode.srcIn),
+              children: [
+                Text(
+                  title ?? "",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: textColor,
+                  ),
                 ),
-              ),
-            )
-          ],
-        ),
-      ),
-    );
+                Spacer(),
+                SizedBox(
+                  width: 26,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      icon ?? "assets/icons/right_arrow.svg",
+                      colorFilter: ColorFilter.mode(
+                          iconColor ?? Colors.black, BlendMode.srcIn),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ));
   }
 }
