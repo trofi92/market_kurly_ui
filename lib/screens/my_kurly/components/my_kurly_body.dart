@@ -45,7 +45,7 @@ Padding buildPaddingTextMenuCard(String text, GestureTapCallback press) {
       height: 55,
       child: TextMenuCard(
           title: text,
-          icon: 'assets/icnos/right-arrow.svg',
+          icon: 'assets/icons/right-arrow.svg',
           press: press,
           textColor: Colors.black),
     ),

@@ -12,7 +12,7 @@ class MyKurlyScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "마이컬리",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.white),
           ),
           automaticallyImplyLeading: false,
           actions: [

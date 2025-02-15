@@ -22,9 +22,11 @@ class DefaultButton extends StatelessWidget {
         backgroundColor: color,
         padding: EdgeInsets.all(16),
       ),
-      child: Text(
-        text ?? "",
-        style: textTheme().titleSmall,
+      child: Center(
+        child: Text(
+          text ?? "",
+          style: textTheme().titleSmall?.copyWith(color: Colors.white),
+        ),
       ),
     );
   }
