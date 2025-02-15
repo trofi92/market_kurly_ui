@@ -6,6 +6,7 @@ import 'package:market_curly_ui/screens/category/category_screen.dart';
 import 'package:market_curly_ui/screens/home/home_screen.dart';
 import 'package:market_curly_ui/screens/my_kurly/my_kurly_screen.dart';
 import 'package:market_curly_ui/screens/recommand/recommend_screen.dart';
+import 'package:market_curly_ui/screens/search/search_screen.dart';
 
 class MainScreens extends StatefulWidget {
   static const String routeName = '/main_screen';
@@ -28,6 +29,7 @@ class _MainScreensState extends State<MainScreens> {
           HomeScreen(),
           RecommendScreen(),
           CategoryScreen(),
+          SearchScreen(),
           MyKurlyScreen(),
         ],
       ),
