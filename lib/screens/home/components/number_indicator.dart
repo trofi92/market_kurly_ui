@@ -10,8 +10,8 @@ class NumberIndicator extends StatelessWidget {
     super.key,
     required this.currentPage,
     required this.length,
-    required this.width,
-    required this.height,
+    this.width = 48,
+    this.height = 25,
   });
 
   @override

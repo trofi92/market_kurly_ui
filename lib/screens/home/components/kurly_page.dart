@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:market_curly_ui/screens/home/components/kurly_banner_item.dart';
 
 class KurlyPage extends StatelessWidget {
   const KurlyPage({super.key});
@@ -6,7 +7,11 @@ class KurlyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: ListView(
+        children: [
+          KurlyBannerItem(),
+        ],
+      ),
     );
   }
 }

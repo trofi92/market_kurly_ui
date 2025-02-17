@@ -23,7 +23,10 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          title: Text("Kurly"),
+          title: Text(
+            "Kurly",
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
           actions: [
             CustomActions(),
           ],
