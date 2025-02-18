@@ -19,35 +19,45 @@ class _KurlyBannerItemState extends State<KurlyBannerItem> {
       children: [
         SizedBox(
           height: 300,
-          child: PageView.builder(
-            itemCount: list.length,
-            itemBuilder: (context, index) {
-              return Stack(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(list[index].bannerImage),
-                          fit: BoxFit.cover),
-                    ),
+          child: list.isEmpty
+              ? const Center(
+                  child: Text('표시할 배너가 없습니다.'),
+                )
+              : PageView.builder(
+                  itemCount: null,
+                  controller: PageController(
+                    initialPage: 0,
                   ),
-                  Positioned(
-                    top: 50,
-                    left: 16,
-                    child: BoxBorderText(
-                      title: list[index].eventTitle,
-                      subTitle: list[index].eventContent,
-                    ),
-                  ),
-                ],
-              );
-            },
-            onPageChanged: (value) {
-              setState(() {
-                currentPage = value;
-              });
-            },
-          ),
+                  itemBuilder: (context, index) {
+                    final adjustedIndex = index % list.length;
+                    return Stack(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image:
+                                  AssetImage(list[adjustedIndex].bannerImage),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 50,
+                          left: 16,
+                          child: BoxBorderText(
+                            title: list[adjustedIndex].eventTitle,
+                            subTitle: list[adjustedIndex].eventContent,
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                  onPageChanged: (value) {
+                    setState(() {
+                      currentPage = value % list.length;
+                    });
+                  },
+                ),
         ),
         Positioned(
           bottom: 16,
