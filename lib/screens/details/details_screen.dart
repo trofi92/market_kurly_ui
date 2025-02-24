@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:market_curly_ui/constants.dart';
-import 'package:market_curly_ui/models/product.dart';
 import 'package:market_curly_ui/models/product_details_arguments.dart';
 import 'package:market_curly_ui/screens/components/default_button.dart';
 import 'package:market_curly_ui/screens/details/components/body.dart';
