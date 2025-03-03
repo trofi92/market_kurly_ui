@@ -20,7 +20,7 @@ class _BenefitPageState extends State<BenefitPage> {
       onRefresh: _onRefresh,
       child: ListView.builder(
         itemBuilder: (context, index) {
-          return Padding(
+          Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: Container(
                 padding: const EdgeInsets.only(left: 22),
@@ -31,6 +31,7 @@ class _BenefitPageState extends State<BenefitPage> {
                     children: [
                       Column(
                         children: [
+                          // const Spacer(),
                           Text(
                             "${benefitBanners[index].title}",
                             style: textTheme().bodyMedium,
@@ -52,6 +53,7 @@ class _BenefitPageState extends State<BenefitPage> {
                       const SizedBox(width: 22),
                     ]),
               ));
+          return null;
         },
         itemCount: benefitBanners.length,
       ),

@@ -50,7 +50,7 @@ class _ExtendsIconTextCardState extends State<ExtendsIconTextCard> {
                   child: IconButton(
                     onPressed: () => toggle(),
                     icon: SvgPicture.asset(
-                      "assets/icons/arrow-up.svg",
+                      "assets/icons/down-arrow.svg",
                       colorFilter: ColorFilter.mode(
                         Colors.grey,
                         BlendMode.srcIn,

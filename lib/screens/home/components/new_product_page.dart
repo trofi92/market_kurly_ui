@@ -32,11 +32,11 @@ class NewProductPage extends StatelessWidget {
             ],
           ),
           SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              mainAxisExtent: 200.0,
-              crossAxisSpacing: 30.0,
-              childAspectRatio: 1.5,
-              crossAxisCount: productList.length,
+            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 200.0,
+              mainAxisSpacing: 30.0,
+              crossAxisSpacing: 8.0,
+              childAspectRatio: 0.6,
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {

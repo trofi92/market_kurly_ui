@@ -14,8 +14,8 @@ class Body extends StatelessWidget {
         // ignore: sized_box_for_whitespace
         Container(
           height: 500,
-          child: Image.network(
-            product.imagePath ?? '',
+          child: Image.asset(
+            product.imagePath ?? 'assets/images/kurly_banner_0.jpg',
             fit: BoxFit.cover,
           ),
         ),

@@ -30,11 +30,11 @@ List listCategoryMenuList = [
     title: "국 반찬 메인요리",
   ),
   ListCategoryMenu(
-    icon: "assets/icons/right-  .svg",
+    icon: "assets/icons/right-arrow.svg",
     title: "샐러드 간편식",
   ),
   ListCategoryMenu(
-    icon: "assets/icons/noddles-in-the-box.svg",
+    icon: "assets/icons/noddles-in-box.svg",
     title: "면 양념 오일",
   ),
   ListCategoryMenu(

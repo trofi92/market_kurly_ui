@@ -15,7 +15,7 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Category"),
+        title: Text("Category", style: TextStyle(color: Colors.white)),
         actions: [CustomActions()],
         automaticallyImplyLeading: false,
       ),
