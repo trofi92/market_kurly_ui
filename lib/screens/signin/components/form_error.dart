@@ -10,7 +10,7 @@ class FormError extends StatelessWidget {
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: List.generate(
-        errors.length ?? 0,
+        errors.length,
         (index) => Text(
           " * ${errors[index]}",
           style: TextStyle(color: Colors.red),

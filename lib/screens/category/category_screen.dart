@@ -15,7 +15,7 @@ class CategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Category", style: TextStyle(color: Colors.white)),
+        title: Text("카테고리", style: TextStyle(color: Colors.white)),
         actions: [CustomActions()],
         automaticallyImplyLeading: false,
       ),
@@ -40,10 +40,12 @@ class CategoryScreen extends StatelessWidget {
             child: Divider(height: 12, color: Colors.grey[200], thickness: 12),
           ),
           SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) =>
-                  ExtendsIconTextCard(item: listCategoryMenuList[index]),
-              childCount: listCategoryMenuList.length,
+            delegate: SliverChildListDelegate(
+              List.generate(
+                listCategoryMenuList.length,
+                (index) =>
+                    ExtendsIconTextCard(item: listCategoryMenuList[index]),
+              ),
             ),
           ),
           SliverToBoxAdapter(
@@ -60,9 +62,9 @@ class CategoryScreen extends StatelessWidget {
           ),
           //SilverGrid
           SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.only(left: 16, right: 16, bottom: 40),
             sliver: SliverGrid(
-              gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                 maxCrossAxisExtent: 200.0,
                 mainAxisSpacing: 16.0,
                 crossAxisSpacing: 10.0,
@@ -70,8 +72,8 @@ class CategoryScreen extends StatelessWidget {
               ),
               delegate: SliverChildBuilderDelegate(
                 (context, index) =>
-                    ImageTextCard(item: gridCategoryMenu[index]),
-                childCount: gridCategoryMenu.length,
+                    ImageTextCard(item: gridCategoryMenuList[index]),
+                childCount: gridCategoryMenuList.length,
               ),
             ),
           ),

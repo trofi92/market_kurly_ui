@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:market_curly_ui/constants.dart';
 
 class DefaultSearchField extends StatefulWidget {
   const DefaultSearchField({super.key});
@@ -15,7 +14,7 @@ class _DefaultSearchFieldState extends State<DefaultSearchField> {
 
   @override
   void initState() {
-    super.dispose();
+    super.initState();
     SystemChannels.textInput.invokeMethod('TextInput.show');
     _focusNode.addListener(() => _onFocusChange());
   }

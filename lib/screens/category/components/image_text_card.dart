@@ -10,6 +10,7 @@ class ImageTextCard extends StatelessWidget {
     return Card(
       shadowColor: Colors.black,
       elevation: 1,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0.0)),
       margin: EdgeInsets.zero,
       child: Column(
         children: [
@@ -26,7 +27,10 @@ class ImageTextCard extends StatelessWidget {
             flex: 1,
             child: Align(
               alignment: Alignment.centerLeft,
-              child: Text(item.title, style: TextStyle(fontSize: 13)),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(item.title, style: TextStyle(fontSize: 13)),
+              ),
             ),
           ),
         ],

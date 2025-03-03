@@ -46,6 +46,7 @@ class _ExtendsIconTextCardState extends State<ExtendsIconTextCard> {
                 Text(item.title),
                 const Spacer(),
                 SizedBox(
+                  height: 60,
                   width: 30,
                   child: IconButton(
                     onPressed: () => toggle(),

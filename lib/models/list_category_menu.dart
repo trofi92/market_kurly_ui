@@ -30,7 +30,7 @@ List listCategoryMenuList = [
     title: "국 반찬 메인요리",
   ),
   ListCategoryMenu(
-    icon: "assets/icons/right-arrow.svg",
+    icon: "assets/icons/salad.svg",
     title: "샐러드 간편식",
   ),
   ListCategoryMenu(
